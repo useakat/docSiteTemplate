@@ -39,3 +39,6 @@ To use this for yourself, make a copy of this template project and change `conte
 Taxonomies such as tags and categories work in the same way as they do with Docsy.  They are disabled by default. 
 
 See the [Docsy taxonomy support](https://www.docsy.dev/docs/adding-content/taxonomy/) documentation for instructions.
+
+## instruction for deploying a document site on github pages using this template 
+1. 
