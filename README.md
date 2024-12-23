@@ -41,4 +41,5 @@ Taxonomies such as tags and categories work in the same way as they do with Docs
 See the [Docsy taxonomy support](https://www.docsy.dev/docs/adding-content/taxonomy/) documentation for instructions.
 
 ## instruction for deploying a document site on github pages using this template 
-1. 
+### 1. deployment on  github pages
+1. レポジトリの設定 > pages で pages にデプロイする branch とディレクトリを指定する
