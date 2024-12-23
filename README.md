@@ -56,6 +56,7 @@ git submodule update --init --recursive
 ### install PostCSS
 ```bash
 npm install -D postcss postcss-cli autoprefixer
+npm audit fix --force
 ```
 
 ## instruction for deploying a document site on github pages using this template 
