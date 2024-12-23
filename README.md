@@ -40,6 +40,24 @@ Taxonomies such as tags and categories work in the same way as they do with Docs
 
 See the [Docsy taxonomy support](https://www.docsy.dev/docs/adding-content/taxonomy/) documentation for instructions.
 
+## 環境構築
+### install hugo extended version
+```bash
+sudo rm -rf /usr/local/bin/hugo
+curl -L https://github.com/gohugoio/hugo/releases/download/v0.128.0/hugo_extended_0.128.0_linux-amd64.tar.gz | sudo tar -xz -C /usr/bin hugo
+
+echo 'export PATH="/usr/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+```
+### initialize git submodules
+```bash
+git submodule update --init --recursive
+```
+
+### install PostCSS
+```bash
+npm install -D postcss postcss-cli autoprefixer
+```
+
 ## instruction for deploying a document site on github pages using this template 
 ### 1. deployment on  github pages
 1. レポジトリの設定 > pages で pages にデプロイする branch とディレクトリを指定する
