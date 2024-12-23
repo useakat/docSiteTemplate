@@ -61,4 +61,4 @@ npm audit fix --force
 
 ## instruction for deploying a document site on github pages using this template 
 ### 1. deployment on  github pages
-1. レポジトリの設定 > pages で pages にデプロイする branch とディレクトリを指定する
+1. レポジトリの設定 > pages で pages にデプロイする branch とディレクトリを指定す.
