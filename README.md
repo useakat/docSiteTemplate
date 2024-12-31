@@ -44,7 +44,7 @@ See the [Docsy taxonomy support](https://www.docsy.dev/docs/adding-content/taxon
 ### install hugo extended version
 ```bash
 sudo rm -rf /usr/local/bin/hugo
-curl -L https://github.com/gohugoio/hugo/releases/download/v0.128.0/hugo_extended_0.128.0_linux-amd64.tar.gz | sudo tar -xz -C /usr/bin hugo
+curl -L https://github.com/gohugoio/hugo/releases/download/v0.122.0/hugo_extended_0.122.0_linux-amd64.tar.gz | sudo tar -xz -C /usr/bin hugo
 
 echo 'export PATH="/usr/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 ```
