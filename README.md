@@ -3,6 +3,7 @@
 This is modified simpler version of mostly docsy for japanese site.
 This is optimized for deployment on github pages using github actions. 
 
+
 ## how to setup
 ### install hugo extended version
 ```bash
@@ -38,10 +39,11 @@ npm install -D postcss postcss-cli autoprefixer
 2. add print option for [outputs] as
    ```section = [ "HTML", "RSS", "print" ]```
    This enables "print entire section" link for section page. 
+ 
+### setting on github pages
+レポジトリの Settings > Github Pages で Source に "Github Actions" を指定する。
+  ![alt text](<Screenshot 2024-12-31 22.34.17.png>)
 
-## instruction for deploying a document site on github pages using this template 
-### 1. deployment on  github pages
-1. レポジトリの設定 > pages で pages にデプロイする branch とディレクトリを指定す.
 
 ## The original explanation for "mostly docs" 
 This is an example site that uses the [Docsy](https://docsy.dev) Hugo theme.  It's an alternative version of the ["just the docs"](https://github.com/lisaFC/justdocs/) site that uses a documentation page as its home page, which each section also being documentation, rather than starting from `/docs/`.
