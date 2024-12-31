@@ -1,6 +1,49 @@
-# Docsy "mostly docs"
+# Docsy "mostly docs -- simpler japanese version"
 
+This is modified simpler version of mostly docsy for japanese site.
+This is optimized for deployment on github pages using github actions. 
 
+## how to setup
+### install hugo extended version
+```bash
+sudo rm -rf /usr/local/bin/hugo
+
+curl -L https://github.com/gohugoio/hugo/releases/download/v0.122.0/hugo_extended_0.122.0_linux-amd64.tar.gz | sudo tar -xz -C /usr/bin hugo
+
+echo 'export PATH="/usr/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+```
+
+### install PostCSS
+```bash
+npm install -D postcss postcss-cli autoprefixer
+```
+
+### set docsy theme as a hugo module
+1. initialize hugo modle
+  ```bash
+  hugo mod init github.com/<username>/<reponame>
+  ```
+2. get docsy theme
+  ```bash 
+  hugo mod get github.com/google/docsy@latest
+  ```
+
+3. download resources for docsy theme
+  ```bash
+  hugo mod tidy
+  ```
+
+### modify config.toml to use docsy theme
+1. set ```theme = ["github.com/google/docsy"]```
+2. add print option for [outputs] as
+   ```section = [ "HTML", "RSS", "print" ]```
+   This enables "print entire section" link for section page. 
+
+## instruction for deploying a document site on github pages using this template 
+### 1. deployment on  github pages
+1. レポジトリの設定 > pages で pages にデプロイする branch とディレクトリを指定す.
+
+## The original explanation for "mostly docs" 
 This is an example site that uses the [Docsy](https://docsy.dev) Hugo theme.  It's an alternative version of the ["just the docs"](https://github.com/lisaFC/justdocs/) site that uses a documentation page as its home page, which each section also being documentation, rather than starting from `/docs/`.
 
 You can see a preview of this site at https://mostlydocs.netlify.app/
@@ -39,36 +82,3 @@ To use this for yourself, make a copy of this template project and change `conte
 Taxonomies such as tags and categories work in the same way as they do with Docsy.  They are disabled by default. 
 
 See the [Docsy taxonomy support](https://www.docsy.dev/docs/adding-content/taxonomy/) documentation for instructions.
-
-## 環境構築
-### install hugo extended version
-```bash
-sudo rm -rf /usr/local/bin/hugo
-curl -L https://github.com/gohugoio/hugo/releases/download/v0.122.0/hugo_extended_0.122.0_linux-amd64.tar.gz | sudo tar -xz -C /usr/bin hugo
-
-echo 'export PATH="/usr/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
-```
-
-### install PostCSS
-```bash
-npm install -D postcss postcss-cli autoprefixer
-```
-
-### set docsy theme as a hugo module
-1. initialize hugo modle
-  ```bash
-  hugo mod init github.com/username/reponame
-  ```
-2. get docsy theme
-  ```bash 
-  hugo mod get github.com/google/docsy@latest
-  ```
-
-3. download resources for docsy theme
-  ```bash
-  hugo mod tidy
-  ```
-
-## instruction for deploying a document site on github pages using this template 
-### 1. deployment on  github pages
-1. レポジトリの設定 > pages で pages にデプロイする branch とディレクトリを指定す.
