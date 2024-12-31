@@ -48,16 +48,37 @@ curl -L https://github.com/gohugoio/hugo/releases/download/v0.128.0/hugo_extende
 
 echo 'export PATH="/usr/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 ```
-### initialize git submodules
+<!--### initialize git submodules
 ```bash
 git submodule update --init --recursive
 ```
+-->
 
 ### install PostCSS
 ```bash
 npm install -D postcss postcss-cli autoprefixer
 npm audit fix --force
 ```
+
+### set docsy theme as a hugo module
+1. initialize hugo modle
+  ```bash
+  hugo mod init github.com/username/reponame
+  ```
+2. get docsy theme
+  ```bash 
+  hugo mod get github.com/google/docsy@latest
+  ```
+
+3. modify config.toml
+  ```toml
+  theme = ["github.com/google/docsy]
+  ```
+
+4. download resources for docsy theme
+  ```bash
+  hugo mod tidy
+  ```
 
 ## instruction for deploying a document site on github pages using this template 
 ### 1. deployment on  github pages
