@@ -1,12 +1,9 @@
-#baseURL = "/"
 title = "Mostly Docs"
 
 enableRobotsTXT = false
 
-# Hugo allows theme composition (and inheritance). The precedence is from left to right.
-theme = ["github.com/google/docsy"]
+# theme = ["github.com/google/docsy"]
 
-# Will give values to .Lastmod etc.
 enableGitInfo = true
 
 # Language settings
@@ -68,7 +65,7 @@ shortname = "" # Replace with your Disqus shortname if you want to enable commen
 # Comment out this section to disable the "Print entire section" feature
 # See https://www.docsy.dev/docs/adding-content/print/
 [outputs]
-section = [ "HTML", "RSS", "print" ]
+section = [ "HTML", "RSS" ]
 
 # Everything below this are Site Params
 
